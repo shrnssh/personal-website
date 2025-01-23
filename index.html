@@ -3,28 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Personal Website</title>
+  <title>Sharan Seshadri</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="blog.html">Blog</a>
-      <a href="projects.html">Projects</a>
-    </nav>
-  </header>
+  <div id="container">
+    <!-- Header Section -->
+    <header>
+      <div class="header-left">
+        <h1>Sharan Seshadri</h1>
+      </div>
+      <div class="header-right">
+        <a href="assets/resume.pdf" target="_blank" class="resume-link">Resume</a>
+        <a href="https://www.linkedin.com/in/sharan-seshadri/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://x.com/sharan2510" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <button id="theme-toggle">
+          <i class="fas fa-sun"></i>
+        </button>
+      </div>
+    </header>
 
-  <main>
-    <section class="intro">
-      <h1>Hi, I'm Sharan!</h1>
-      <p>Welcome to my personal website!</p>
-    </section>
-  </main>
+    <!-- Main Content Section -->
+    <main>
+      <section class="intro">
+        <h2>Hey, I'm Sharan!</h2>
+        <p>
+          I'm a software engineer. This is where I share occasional musings.
+          <!-- <a href="#articles">articles</a>, <a href="#notes">notes</a>, and occasional muses. -->
+        </p>
+      </section>
 
-  <footer>
-    <p>© 2025 Sharan Seshadri. All rights reserved.</p>
-  </footer>
+      <!-- Articles Section -->
+      <section id="articles">
+        <h3>Articles</h3>
+        <ul>
+          <!-- <li>
+            <a href="#">Creating a Microservice Architecture with Golang</a> <span>October 2024</span>
+          </li>
+          <li>
+            <a href="#">Understanding Kubernetes Operators</a> <span>September 2024</span>
+          </li> -->
+        </ul>
+      </section>
+
+      <!-- Notes Section -->
+      <section id="notes">
+        <h3>Notes</h3>
+        <ul>
+          <!-- <li>
+            <a href="#">Reflections on DevOps in 2024</a> <span>January 2024</span>
+          </li>
+          <li>
+            <a href="#">A Short Guide to Kubernetes Networking</a> <span>December 2023</span>
+          </li> -->
+        </ul>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Sharan Seshadri. All rights reserved.</p>
+    </footer>
+  </div>
+  <script src="scripts.js"></script>
 </body>
 </html>

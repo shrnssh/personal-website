@@ -1,0 +1,60 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  /* Header Navigation */
+  header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 1em;
+    position: sticky;
+    top: 0;
+  }
+  
+  header nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  header nav a {
+    text-decoration: none;
+    color: #0073e6;
+    font-weight: bold;
+  }
+  
+  header nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Intro Section */
+  .intro {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .intro h1 {
+    font-size: 2.5em;
+  }
+  
+  .intro p {
+    font-size: 1.2em;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1em;
+    background: #f1f1f1;
+    color: #555;
+    border-top: 1px solid #ddd;
+  }
+  

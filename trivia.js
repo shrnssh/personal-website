@@ -51,6 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileNav = document.getElementById("mobile-nav");
 
   menuButton.addEventListener("click", () => {
-    mobileNav.classList.toggle("hidden");
+    mobileNav.classList.toggle("visible");
   });
 });

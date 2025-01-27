@@ -197,7 +197,7 @@ body.dark footer {
 
 .details h4 {
   font-size: 1.5em;
-  margin: 0 0 0.5em;
+  margin: 0 0 0.2em;
 }
 
 .details h4 span {
@@ -209,7 +209,8 @@ body.dark footer {
 .details p {
   font-size: 1em;
   color: #333;
-  line-height: 1.6;
+  margin: 0; /* Ensure there's no extra margin */
+  line-height: 1.4; /* Slightly smaller line height for tighter spacing */
 }
 
 /* Skills Section */
@@ -418,4 +419,67 @@ hr {
 
 .experience.no-divider {
   margin-bottom: 2em; /* Adds space between each experience section */
+}
+
+/* Professional Experience Section */
+#professional-experience {
+  padding: 2em 1em;
+  text-align: center; /* Center align the entire section */
+  max-width: 800px; /* Consistent width with other sections */
+  margin: 0 auto; /* Center the section within the page */
+}
+
+#professional-experience h2 {
+  font-size: 2em;
+  margin-bottom: 1.5em;
+  color: #0073e6; /* Accent color */
+}
+
+.experience-item {
+  margin-bottom: 2em;
+}
+
+.experience-item .timeline {
+  font-size: 1em;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 0.5em;
+}
+
+.experience-item .details {
+  max-width: 600px;
+  margin: 0 auto; /* Center the content */
+}
+
+.experience-item .details h4 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.2em;
+  line-height: 1.4;
+}
+
+.experience-item .details h4 span a {
+  color: #0073e6; /* Match link color with accent color */
+  text-decoration: none;
+}
+
+.experience-item .details p {
+  font-size: 1.1em;
+  color: #666;
+  margin-top: 0;
+}
+
+.experience-item ul {
+  list-style-type: disc;
+  margin: 1em 0;
+  padding-left: 1.5em; /* Indent bullet points */
+  text-align: left; /* Left-align the bullet points */
+}
+
+.experience-item ul li {
+  margin-bottom: 0.5em;
+  font-size: 1em;
+  color: #333;
+  line-height: 1.6;
 }

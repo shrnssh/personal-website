@@ -74,6 +74,11 @@ header {
   color: #0073e6;
 }
 
+
+#hamburger-menu.open {
+  color: #005bb5; /* Change color when active */
+}
+
 #hamburger-menu:hover {
   color: #005bb5;
 }
@@ -89,6 +94,11 @@ header {
   text-align: center;
   border-top: 1px solid #ddd;
   padding: 1em 0;
+  z-index: 1000;
+}
+
+#mobile-nav.visible {
+  display: block;
 }
 
 #mobile-nav a {
@@ -103,10 +113,6 @@ header {
 #mobile-nav a:hover {
   background-color: #f0f0f0;
   color: #005bb5;
-}
-
-#mobile-nav.visible {
-  display: block;
 }
 
 /* Responsive Design */

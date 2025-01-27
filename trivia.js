@@ -45,17 +45,3 @@ document.getElementById("next-trivia").addEventListener("click", (e) => {
 
 // Fetch facts and initialize
 fetchTriviaFacts();
-
-document.addEventListener("DOMContentLoaded", () => {
-  const menuButton = document.getElementById("hamburger-menu");
-  const mobileNav = document.getElementById("mobile-nav");
-
-  menuButton.addEventListener("click", () => {
-    mobileNav.classList.toggle("visible");
-  });
-});
-
-document.getElementById("hamburger-menu").addEventListener("click", function () {
-  const mobileNav = document.getElementById("mobile-nav");
-  mobileNav.classList.toggle("visible");
-});

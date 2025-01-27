@@ -273,51 +273,71 @@ body.dark footer {
   line-height: 1.6; /* Improve readability */
 }
 
-/* Academic Experience Section */
+/* Center Academic Experience Section */
 #academic-experience {
-  padding: 2em 1em;
   text-align: center;
-  max-width: 800px; /* Ensure same width as other headings */
-  margin: 0 auto; /* Center the section */
+  max-width: 800px;
+  margin: 0 auto; /* Center the entire section */
+  padding: 2em 1em; /* Add padding for spacing */
 }
 
 #academic-experience h3 {
   font-size: 2em;
+  color: #0073e6; /* Match the accent color */
   margin-bottom: 1.5em;
-  color: #0073e6; /* Accent color */
-  text-align: center; /* Ensure heading is centered */
 }
 
-/* Academic Items */
 .academic-item {
-  margin-bottom: 2em;
-  text-align: center; /* Center all text inside this container */
+  margin-bottom: 2em; /* Add spacing between items */
+  text-align: center; /* Center-align all text */
 }
 
 .academic-item .timeline {
   font-size: 1em;
   font-weight: bold;
   color: #666;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5em; /* Add space between the timeline and details */
 }
 
 .academic-item .details {
-  max-width: 800px; /* Ensure consistent width */
-  margin: 0 auto; /* Center align details within the section */
+  max-width: 600px;
+  margin: 0 auto; /* Center-align details within the section */
 }
 
 .academic-item .details h4 {
   font-size: 1.5em;
-  font-weight: bold;
   color: #333;
-  margin-bottom: 0.2em;
-  line-height: 1.4;
+  margin-bottom: 0.2em; /* Space below the title */
+}
+
+.academic-item .details span a {
+  color: #0073e6; /* Blue for links */
+  text-decoration: none;
+}
+
+.academic-item .details span a:hover {
+  text-decoration: underline;
 }
 
 .academic-item .details p {
-  font-size: 1.4em;
-  color: #0073e6; /* Blue for university */
-  margin: 0;
+  font-size: 1em;
+  color: #666; /* Softer color for location */
+  margin-bottom: 1em;
+}
+
+.academic-item ul {
+  list-style-type: disc;
+  padding-left: 1.5em; /* Indentation for bullets */
+  text-align: left; /* Align bullet points to the left */
+  margin: 1em auto; /* Center-align the list container */
+  max-width: 600px;
+}
+
+.academic-item ul li {
+  margin-bottom: 0.5em;
+  font-size: 1em;
+  line-height: 1.6; /* Improve readability */
+  color: #333;
 }
 
 /* Divider Styling */

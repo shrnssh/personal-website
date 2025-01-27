@@ -30,11 +30,10 @@ header {
   top: 0;
   z-index: 1000;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
 }
 
-/* Desktop Header */
 .header-desktop {
   display: flex;
   justify-content: space-between;
@@ -44,7 +43,7 @@ header {
 
 .header-left, .header-right {
   display: flex;
-  gap: 2em; /* Add consistent spacing between links */
+  gap: 1.5em; /* Adjust spacing for alignment */
 }
 
 .header-left a, .header-right a {
@@ -61,7 +60,7 @@ header {
 
 /* Mobile Header */
 .mobile-header {
-  display: none; /* Hidden by default for larger screens */
+  display: none; /* Hide for larger screens */
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -106,7 +105,6 @@ header {
   color: #005bb5;
 }
 
-/* Toggle visibility for mobile nav */
 #mobile-nav.visible {
   display: block;
 }
@@ -114,13 +112,14 @@ header {
 /* Responsive Design */
 @media (max-width: 768px) {
   .header-desktop {
-    display: none; /* Hide desktop header on small screens */
+    display: none; /* Hide desktop header on smaller screens */
   }
 
   .mobile-header {
     display: flex; /* Show mobile header */
   }
 }
+
 
 
 /* Intro Section */

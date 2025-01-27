@@ -54,3 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
     mobileNav.classList.toggle("visible");
   });
 });
+
+document.getElementById("hamburger-menu").addEventListener("click", function () {
+  const mobileNav = document.getElementById("mobile-nav");
+  mobileNav.classList.toggle("visible");
+});

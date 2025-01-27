@@ -27,11 +27,12 @@ header {
   justify-content: space-between; /* Space between left and right sections */
   align-items: center;
   padding: 1em 2em;
-  background-color: inherit;
+  background-color: #ffffff; /* Opaque white background */
   border-bottom: 1px solid #ddd;
   position: sticky; /* Keeps the header fixed at the top */
   top: 0;
   z-index: 10;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better separation */
 }
 
 .header-left {
@@ -97,12 +98,14 @@ header button:hover {
 
 .intro h2 {
   font-size: 2em;
-  margin: 0;
+  margin: 1;
 }
 
 .intro p {
-  font-size: 1.2em;
-  margin-top: 0.5em;
+  text-align: justify;
+  font-size: 1.1em; /* Optional: Adjust font size if needed */
+  line-height: 1.6; /* Optional: Improve readability by adding line height */
+  margin: 1.5em 0; /* Optional: Add spacing between paragraphs */
 }
 
 /* Main Content Section */
@@ -143,4 +146,276 @@ body.dark footer {
 
 .header-right i:hover {
   color: #90caf9; /* Adjust hover color for dark mode */
+}
+
+/* Work Experience Section */
+#work-experience {
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 1em;
+}
+
+#work-experience h2 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.section {
+  margin-bottom: 2em;
+}
+
+.section h3 {
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 1.5em;
+  color: #0073e6;
+}
+
+/* Experience Entries */
+.experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 1.5em;
+  padding: 1em 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.timeline {
+  font-size: 1em;
+  font-weight: bold;
+  color: #666;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.details {
+  max-width: 600px;
+}
+
+.details h4 {
+  font-size: 1.5em;
+  margin: 0 0 0.5em;
+}
+
+.details h4 span {
+  font-size: 1em;
+  font-weight: normal;
+  color: #0073e6;
+}
+
+.details p {
+  font-size: 1em;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Skills Section */
+#skills {
+  padding: 2em 1em;
+  text-align: center;
+}
+
+#skills h3 {
+  font-size: 2em;
+  margin-bottom: 1em;
+  color: #0073e6; /* Matching accent color */
+}
+
+.skills-categories {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left; /* Align content to the left like other sections */
+}
+
+.skills-category {
+  margin-bottom: 1.5em; /* Spacing between skill categories */
+}
+
+.skills-category h4 {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333; /* Match text color with other headings */
+  margin-bottom: 0.5em;
+}
+
+.skills-category p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #555; /* Softer color for text */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experience {
+    text-align: center;
+  }
+
+  .details {
+    max-width: 100%;
+  }
+}
+
+.details ul {
+  list-style-type: disc; /* Standard bullet points */
+  margin: 1em 0;
+  padding-left: 1.5em; /* Indentation for bullet points */
+  color: #333; /* Text color for bullets */
+}
+
+.details ul li {
+  margin-bottom: 0.5em; /* Spacing between bullet points */
+  font-size: 1em; /* Consistent font size */
+  line-height: 1.6; /* Improve readability */
+}
+
+/* Academic Experience Section */
+#academic-experience {
+  padding: 2em 1em;
+  text-align: center;
+  max-width: 800px; /* Ensure same width as other headings */
+  margin: 0 auto; /* Center the section */
+}
+
+#academic-experience h3 {
+  font-size: 2em;
+  margin-bottom: 1.5em;
+  color: #0073e6; /* Accent color */
+  text-align: center; /* Ensure heading is centered */
+}
+
+/* Academic Items */
+.academic-item {
+  margin-bottom: 2em;
+  text-align: center; /* Center all text inside this container */
+}
+
+.academic-item .timeline {
+  font-size: 1em;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 0.5em;
+}
+
+.academic-item .details {
+  max-width: 800px; /* Ensure consistent width */
+  margin: 0 auto; /* Center align details within the section */
+}
+
+.academic-item .details h4 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.2em;
+  line-height: 1.4;
+}
+
+.academic-item .details p {
+  font-size: 1.4em;
+  color: #0073e6; /* Blue for university */
+  margin: 0;
+}
+
+/* Divider Styling */
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 2em 0; /* Adds space above and below the divider */
+  width: 100%; /* Spans the entire container width */
+}
+
+/* Trivia Section */
+#trivia-container {
+  max-width: 800px;
+  margin: 4em auto;
+  text-align: center;
+}
+
+.trivia {
+  padding: 2em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.trivia-date {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 1em;
+}
+
+.trivia-text {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 2em;
+}
+
+.trivia-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.trivia-nav-link {
+  font-size: 1em;
+  color: #0073e6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.trivia-nav-link:hover {
+  text-decoration: underline;
+}
+
+.trivia-header {
+  text-align: center;
+  padding: 3em 1em;
+}
+
+.trivia-header h2 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.trivia-header p {
+  font-size: 1.2em;
+  margin-top: 0.5em;
+}
+
+.experience.no-divider {
+  border-bottom: none; /* Removes the divider */
+  padding-bottom: 0; /* Adjust padding to make spacing consistent */
+}
+
+.experience.no-divider:last-child {
+  margin-bottom: 0; /* Remove extra space for the last item */
+}
+
+.paper-link {
+  display: block; /* Places the link on its own line for clarity */
+  font-size: 1em;
+  color: #0073e6;
+  text-decoration: none;
+  margin-top: 0.5em;
+}
+
+.paper-link:hover {
+  text-decoration: underline;
+  color: #005bb5; /* Darker blue for hover effect */
+}
+
+.profile-photo {
+  display: block;
+  margin: 1em auto; /* Center the image and add spacing */
+  width: 500px; /* Adjust width */
+  height: 500px; /* Match height to width for a perfect circle */
+  border-radius: 50%; /* Ensure the photo stays circular */
+  object-fit: cover; /* Prevent stretching by cropping if needed */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better aesthetics */
+}
+
+.experience.no-divider {
+  margin-bottom: 2em; /* Adds space between each experience section */
 }

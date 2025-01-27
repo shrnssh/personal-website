@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Research - Sharan Seshadri</title>
+  <title>My Work - Sharan Seshadri</title>
   <link rel="stylesheet" href="styles.css">
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
   <div id="container">
@@ -14,9 +15,9 @@
     <header>
       <div class="header-left">
         <a href="index.html">Home</a>
-        <a href="my-work.html">My Work</a>
-        <a href="skills.html">Skills</a>
-        <a href="fav-trivia.html">Favorite Trivia</a>
+        <a href="my-work.html">Work</a>
+        <a href="research.html">Research</a>
+        <a href="weekly-trivia.html">Weekly Trivia</a>
       </div>
       <div class="header-right">
         <a href="assets/sharan_seshadri_resume.pdf" target="_blank" class="resume-link">Resume</a>
@@ -26,24 +27,63 @@
         <a href="https://x.com/sharan2510" target="_blank" aria-label="Twitter">
           <i class="fab fa-twitter"></i>
         </a>
-        <button id="theme-toggle" aria-label="Toggle theme">
-          <i class="fas fa-sun"></i>
-        </button>
       </div>
     </header>
 
-    <!-- Content Section -->
+
+    <!-- Work Experience Section -->
     <main>
-      <section>
-        <h2>Research</h2>
-        <p>Here’s a summary of my academic work and research:</p>
-        <ul>
-          <li><strong>Paper:</strong> Knowledge Distillation for Object Detection <br>
-              <strong>Published:</strong> British Machine Vision Conference, 2021</li>
-          <li><strong>Focus:</strong> Optimizing machine learning models for better object detection accuracy.</li>
-          <li><strong>Skills:</strong> Deep Learning, TensorFlow, PyTorch, Model Optimization</li>
-        </ul>
-      </section>
+      <section id="work-experience">
+        <h2>Research</h2>        
+
+        <!-- Academic Experience -->
+        <div class="section" id="research-experience">
+            <h3>Publications</h3>
+            <div class="academic-item">
+                <div class="timeline">2021</div>
+                <div class="details">
+                    <h4>Beyond Classification: Knowledge Distillation using Multi-Object Impressions</h4>
+                    <p>British Machine Vision Conference (BMVC)</p>
+                    <a href="https://arxiv.org/abs/2110.14215?context=cs" target="_blank" class="paper-link">View Paper</a>
+                </div>
+            </div>
+            <div class="academic-item">
+                <div class="timeline">2020</div>
+                <div class="details">
+                    <h4>ManufacturingNet: A Machine Learning Toolbox for Engineers</h4>
+                    <p>ML4Eng Workshop at Neural Information Processing Systems (NeurIPS)</p>
+                    <a href="https://ml4eng.github.io/camera_readys/52.pdf" target="_blank" class="paper-link">View Paper</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        <hr>
+
+        <div class="section">
+            <h3>Academic Experience</h3>
+            <div class="experience no-divider">
+              <div class="timeline">May 2020 — Aug 2020</div>
+              <div class="details">
+                <h4>Graduate Research Assistant <span>@ <a href="https://www.cmu.edu/" target="_blank">Carnegie Mellon University</a></span>, Pittsburgh PA</h4>
+                <ul>
+                  <li>Developed a method to classify abnormal ciliary motion, using two-stream convolutional neural networks. Obtained a marginal improvement on the current benchmark performance for binary classification.</li>
+                  <li>Contributed to ManufacturingNet, an open source Python library offering robust implementations of featurization and learning algorithms to solve data-driven problems in the manufacturing industry. Accepted to NeurIPS 2020’s workshop on Machine Learning for Engineering Modelling, Simulation, and Design.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="experience no-divider">
+              <div class="timeline">Jul 2019 — Dec 2019</div>
+              <div class="details">
+                <h4>Project Assistant <span>@ <a href="https://iisc.ac." target="_blank">Institute of Science</a></span>, Bengaluru, India</h4>
+                <ul>
+                  <li>Implemented a novel approach for data-free deep learning using knowledge distillation for object detection.</li>
+                  <li>Built a baseline model to generate an object detection dataset from a trained model’s weights, for the Pascal dataset. The dataset was then used to distill knowledge from a larger model to a smaller model.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
     </main>
 
     <!-- Footer -->

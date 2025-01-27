@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css">
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
   <div id="container">
@@ -14,9 +15,9 @@
     <header>
       <div class="header-left">
         <a href="index.html">Home</a>
-        <a href="skills.html">Skills</a>
+        <a href="my-work.html">Work</a>
         <a href="research.html">Research</a>
-        <a href="fun-facts.html">Favorite Trivia</a>
+        <a href="weekly-trivia.html">Weekly Trivia</a>
       </div>
       <div class="header-right">
         <a href="assets/sharan_seshadri_resume.pdf" target="_blank" class="resume-link">Resume</a>
@@ -26,18 +27,72 @@
         <a href="https://x.com/sharan2510" target="_blank" aria-label="Twitter">
           <i class="fab fa-twitter"></i>
         </a>
-        <button id="theme-toggle" aria-label="Toggle theme">
-          <i class="fas fa-sun"></i>
-        </button>
       </div>
     </header>
 
-    <!-- Content Section -->
+    <!-- Work Experience Section -->
     <main>
-      <section>
+      <section id="work-experience">
         <h2>My Work</h2>
-        <p>A detailed overview of my professional journey and work experience.</p>
-      </section>
+
+        <!-- Professional Experience -->
+        <div class="section">
+            <h3>Professional Experience</h3>
+            <div class="experience">
+              <div class="timeline">2021 — Present</div>
+              <div class="details">
+                <h4>Software Engineer <span>@ <a href="https://www.juniper.net/us/en.html" target="_blank">Juniper Networks</a></span></h4>
+                <ul>
+                    <li>Contributed to the development of visibility features for <a href="https://blogs.juniper.net/en-us/enterprise-cloud-and-transformation/simplify-multicloud-networking-across-hybrid-and-multicloud-networks-at-scale-to-enable-the-best-experience" target="_blank">Juniper Cloud Interlink (JCI) </a>, a SaaS multi-cloud networking product.</li>
+                    <li>Owned the "Application Visibility" component, delivering actionable insights into application performance through metrics such as data consumption trends.</li>
+                    <li>Designed and implemented cost visibility features to aggregate compute and network expenses across AWS resources, providing customers with detailed cost analysis.</li>
+                    <li>Developed a central monitoring system using the Thanos framework for multi-cluster metric aggregation and querying.</li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          
+
+        <!-- Academic Experience -->
+        <div class="section" id="academic-experience">
+            <h3>Education</h3>
+            <div class="academic-item">
+              <div class="timeline">2020 — 2021</div>
+              <div class="details">
+                <h4>Master of Science, Electrical and Computer Engineering</h4>
+                <p>@ <a href="https://www.cmu.edu/" target="_blank"> Carnegie Mellon University</a></p> Pittsburgh, PA
+              </div>
+            </div>
+            <div class="academic-item">
+              <div class="timeline">2015 — 2019</div>
+              <div class="details">
+                <h4>Bachelor of Technology, Electronics and Communication Engineering</h4>
+                <p>@ <a href="https://www.manipal.edu/mit.html" target="_blank"> Manipal University</a></p>Manipal, Karnataka, India 
+              </div>
+            </div>
+          </div>          
+        
+        <!-- Divider -->
+        <hr>
+
+        <!-- Skills -->
+        <div class="section" id="skills">
+            <h3>Skills</h3>
+            <div class="skills-categories">
+              <div class="skills-category">
+                <h4>Languages</h4>
+                <p>C++, Python, Golang</p>
+              </div>
+              <div class="skills-category">
+                <h4>Frameworks</h4>
+                <p>Git, Bazel, PostgreSQL</p>
+              </div>
+              <div class="skills-category">
+                <h4>Cloud/Distributed Systems</h4>
+                <p>Kubernetes, Helm, gRPC, ArgoCD, AWS SDK, Prometheus, Grafana, Thanos, REST, API design, Docker, OpenSearch</p>
+              </div>
+            </div>
+          </div>          
     </main>
 
     <!-- Footer -->

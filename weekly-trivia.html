@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Favorite Trivia - Sharan Seshadri</title>
+  <title>Trivia</title>
   <link rel="stylesheet" href="styles.css">
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
   <div id="container">
     <!-- Header Section -->
+    <!-- Header Section -->
     <header>
       <div class="header-left">
         <a href="index.html">Home</a>
-        <a href="my-work.html">My Work</a>
-        <a href="skills.html">Skills</a>
+        <a href="my-work.html">Work</a>
         <a href="research.html">Research</a>
+        <a href="weekly-trivia.html">Weekly Trivia</a>
       </div>
       <div class="header-right">
         <a href="assets/sharan_seshadri_resume.pdf" target="_blank" class="resume-link">Resume</a>
@@ -26,25 +28,25 @@
         <a href="https://x.com/sharan2510" target="_blank" aria-label="Twitter">
           <i class="fab fa-twitter"></i>
         </a>
-        <button id="theme-toggle" aria-label="Toggle theme">
-          <i class="fas fa-sun"></i>
-        </button>
       </div>
     </header>
 
-    <!-- Content Section -->
-    <main>
-      <section>
-        <h2>Favorite Trivia</h2>
-        <p>Here are some of my favorite trivia that I’ve found interesting:</p>
-        <ul>
-          <!-- <li>The Great Pyramid of Giza was the tallest man-made structure for over 3,800 years.</li>
-          <li>Bananas are berries, but strawberries are not!</li>
-          <li>The first email was sent in 1971 by Ray Tomlinson.</li>
-          <li>Octopuses have three hearts and blue blood.</li>
-          <li>Sharks existed before trees!</li> -->
-        </ul>
-      </section>
+    <!-- Intro Section -->
+    <section class="trivia-header">
+      <h2>Weekly Trivia</h2>
+      <p>Here’s a weekly dose of trivia that I found intriguing. I hope you enjoy it!</p>
+    </section>
+
+    <!-- Trivia Section -->
+    <main id="trivia-container">
+      <div class="trivia">
+        <p class="trivia-date" id="trivia-date"></p>
+        <p class="trivia-text" id="trivia-text"></p>
+        <div class="trivia-navigation">
+          <a href="#" id="prev-trivia" class="trivia-nav-link">Previous </a>
+          <a href="#" id="next-trivia" class="trivia-nav-link">Next</a>
+        </div>
+      </div>
     </main>
 
     <!-- Footer -->
@@ -52,8 +54,8 @@
       <p>© 2025 Sharan Seshadri. All rights reserved.</p>
     </footer>
   </div>
-  
-  <!-- JavaScript for light/dark mode toggle -->
-  <script src="scripts.js"></script>
+
+  <!-- JavaScript -->
+  <script src="trivia.js"></script>
 </body>
 </html>

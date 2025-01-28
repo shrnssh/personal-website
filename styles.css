@@ -129,19 +129,45 @@ header {
 /* Intro Section */
 .intro {
   text-align: center;
-  padding: 3em 1em;
+  padding: 3em 2em; /* Spacing for desktop */
 }
 
 .intro h2 {
-  font-size: 2em;
-  margin: 1;
+  font-size: 2.5em; /* Larger font size for desktop */
+  margin-bottom: 1.5em;
 }
 
 .intro p {
   text-align: justify;
-  font-size: 1.1em; /* Optional: Adjust font size if needed */
-  line-height: 1.6; /* Optional: Improve readability by adding line height */
-  margin: 1.5em 0; /* Optional: Add spacing between paragraphs */
+  font-size: 1.2em; /* Larger text for desktop */
+  line-height: 1.8; /* Improved spacing for readability */
+  margin: 1em auto; /* Centered text for larger screens */
+  max-width: 800px; /* Limit width for better readability */
+}
+
+/* Responsive Design: Override styles for mobile */
+@media (max-width: 768px) {
+  .profile-photo {
+    width: 80%; /* Adjust width for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 250px; /* Limit maximum size */
+    margin: 1em auto; /* Adjust spacing for mobile */
+  }
+
+  .intro {
+    padding: 2em 1em; /* Compact spacing for mobile */
+  }
+
+  .intro h2 {
+    font-size: 1.8em; /* Slightly smaller header for mobile */
+    margin-bottom: 1em;
+  }
+
+  .intro p {
+    font-size: 1em; /* Smaller text for mobile */
+    line-height: 1.5; /* Adjust line height for readability */
+    margin: 1em 1em; /* Add padding to avoid edge-to-edge text */
+  }
 }
 
 /* Main Content Section */
@@ -465,12 +491,12 @@ hr {
 
 .profile-photo {
   display: block;
-  margin: 1em auto; /* Center the image and add spacing */
-  width: 500px; /* Adjust width */
-  height: 500px; /* Match height to width for a perfect circle */
+  margin: 2em auto; /* Larger margin for desktop */
+  width: 500px; /* Full-size photo on desktop */
+  height: 500px; /* Maintain circular shape */
   border-radius: 50%; /* Ensure the photo stays circular */
   object-fit: cover; /* Prevent stretching by cropping if needed */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better aesthetics */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for aesthetics */
 }
 
 .experience.no-divider {

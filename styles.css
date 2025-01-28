@@ -48,7 +48,7 @@ header {
 
 .header-left a, .header-right a {
   text-decoration: none;
-  font-size: 1em;
+  font-size: 1.2em;
   color: #0073e6;
   font-weight: bold;
 }
@@ -492,12 +492,12 @@ hr {
 
 .profile-photo {
   display: block;
-  margin: 2em auto; /* Larger margin for desktop */
-  width: 500px; /* Full-size photo on desktop */
-  height: 500px; /* Maintain circular shape */
-  border-radius: 50%; /* Ensure the photo stays circular */
-  object-fit: cover; /* Prevent stretching by cropping if needed */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for aesthetics */
+  margin: 1em auto; /* Center the image */
+  width: 250px; /* Adjust size */
+  height: 250px; /* Match height to width */
+  border-radius: 50%; /* Make it a perfect circle */
+  object-fit: cover; /* Prevent stretching */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
 }
 
 .experience.no-divider {

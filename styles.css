@@ -85,20 +85,16 @@ header {
 
 /* Mobile Navigation */
 #mobile-nav {
-  display: none;
+  display: none; /* Hidden by default */
   background-color: #ffffff;
   position: absolute;
-  top: 100%;
+  top: 100%; /* Below the header */
   left: 0;
   width: 100%;
   text-align: center;
   border-top: 1px solid #ddd;
   padding: 1em 0;
-  z-index: 1000;
-}
-
-#mobile-nav.visible {
-  display: block;
+  z-index: 1000; /* Ensure it appears above other elements */
 }
 
 #mobile-nav a {
@@ -114,6 +110,11 @@ header {
   background-color: #f0f0f0;
   color: #005bb5;
 }
+
+#mobile-nav.visible {
+  display: block; /* Show when the class "visible" is added */
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

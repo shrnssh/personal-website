@@ -43,5 +43,18 @@ document.getElementById("next-trivia").addEventListener("click", (e) => {
   }
 });
 
+// Hamburger Menu Toggle
+document.addEventListener("DOMContentLoaded", () => {
+  const menuButton = document.getElementById("hamburger-menu");
+  const mobileNav = document.getElementById("mobile-nav");
+
+  if (menuButton && mobileNav) {
+    menuButton.addEventListener("click", () => {
+      mobileNav.classList.toggle("visible");
+    });
+  }
+});
+
+
 // Fetch facts and initialize
 fetchTriviaFacts();

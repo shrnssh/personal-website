@@ -19,7 +19,7 @@ function displayTrivia(index) {
 
   // Update trivia content
   triviaDate.textContent = triviaFacts[index].date;
-  triviaText.textContent = triviaFacts[index].fact;
+  triviaText.innerHTML = triviaFacts[index].fact; // Use innerHTML to parse the HTML content
 
   // Enable/disable navigation links
   prevTrivia.style.display = index === 0 ? "none" : "inline-block";

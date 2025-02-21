@@ -43,18 +43,39 @@ document.getElementById("next-trivia").addEventListener("click", (e) => {
   }
 });
 
-// Hamburger Menu Toggle
+// Hamburger Menu Functionality
 document.addEventListener("DOMContentLoaded", () => {
   const menuButton = document.getElementById("hamburger-menu");
   const mobileNav = document.getElementById("mobile-nav");
 
   if (menuButton && mobileNav) {
-    menuButton.addEventListener("click", () => {
+    menuButton.addEventListener("click", (e) => {
+      e.stopPropagation(); // Prevents unwanted closing when clicking the button
+
       mobileNav.classList.toggle("visible");
+      menuButton.classList.toggle("open");
+
+      // Change icon
+      menuButton.innerHTML = menuButton.classList.contains("open") 
+        ? '<i class="fas fa-times"></i>' // 'X' when open
+        : '<i class="fas fa-bars"></i>'; // Hamburger when closed
+    });
+
+    // Prevent menu from closing when clicking inside
+    mobileNav.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+
+    // Close menu only when clicking the hamburger button again
+    document.addEventListener("click", (e) => {
+      if (!menuButton.contains(e.target) && !mobileNav.contains(e.target)) {
+        mobileNav.classList.remove("visible");
+        menuButton.classList.remove("open");
+        menuButton.innerHTML = '<i class="fas fa-bars"></i>'; // Reset to hamburger icon
+      }
     });
   }
 });
-
 
 // Fetch facts and initialize
 fetchTriviaFacts();

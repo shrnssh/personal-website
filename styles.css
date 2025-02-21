@@ -41,11 +41,32 @@ header {
   align-items: center;
 }
 
+/* Header Layout */
 .header-left, .header-right {
   display: flex;
-  gap: 1.5em; /* Adjust spacing for alignment */
+  align-items: center;
+  gap: 1.5em;
 }
 
+/* Push right-side icons to the right */
+.header-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+
+.header-right i {
+  font-size: 1.2em;
+  color: #0073e6;
+}
+
+.header-right i:hover {
+  color: #90caf9; /* Adjust hover color for dark mode */
+}
+
+
+/* Header Links */
 .header-left a, .header-right a {
   text-decoration: none;
   font-size: 1.2em;
@@ -66,54 +87,89 @@ header {
   width: 100%;
 }
 
+/* Hamburger Menu */
 #hamburger-menu {
   background: none;
   border: none;
   font-size: 1.5em;
   cursor: pointer;
   color: #0073e6;
+  position: absolute;
+  left: 15px; /* Ensures it stays on the left */
+  top: 15px;
+  z-index: 1100;
 }
 
+#hamburger-menu.active {
+  transform: rotate(90deg); /* Rotate when active */
+  color: #005bb5;
+}
 
 #hamburger-menu.open {
-  color: #005bb5; /* Change color when active */
+  color: #005bb5;
 }
 
 #hamburger-menu:hover {
   color: #005bb5;
 }
 
-/* Mobile Navigation */
-#mobile-nav {
-  display: none; /* Hidden by default */
-  background-color: #ffffff;
-  position: absolute;
-  top: 100%; /* Below the header */
-  left: 0;
-  width: 100%;
-  text-align: center;
-  border-top: 1px solid #ddd;
-  padding: 1em 0;
-  z-index: 1000; /* Ensure it appears above other elements */
+
+
+/* Ensure desktop header is visible on large screens */
+@media (min-width: 769px) {
+  .header-desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .mobile-header {
+    display: none;
+  }
 }
 
+/* Mobile Navigation Menu */
+#mobile-nav {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Hidden by default */
+  width: 250px;
+  height: 100%;
+  background-color: white;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+  padding-top: 3em; /* Adjusted padding so items start lower */
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items from the top */
+  padding-left: 20px;
+}
+
+/* Mobile Navigation Links */
 #mobile-nav a {
-  display: block;
-  padding: 1em 0;
-  font-size: 1em;
+  font-size: 1.3em; /* Increased size for better readability */
+  font-weight: bold; /* Make text bolder */
   color: #0073e6;
   text-decoration: none;
-  border-bottom: 1px solid #ddd;
+  padding: 0.6em 1em; /* Reduced vertical spacing */
+  border-radius: 12px; /* Rounded corners */
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  margin-bottom: 0.3em; /* Reduce spacing between items */
 }
 
-#mobile-nav a:hover {
-  background-color: #f0f0f0;
-  color: #005bb5;
-}
-
+/* When the menu is open */
 #mobile-nav.visible {
-  display: block; /* Show when the class "visible" is added */
+  left: 0;
 }
+
+/* Hover effect */
+#mobile-nav a:hover {
+  color: #005bb5;
+  background-color: #f0f0f0;
+}
+
 
 
 /* Responsive Design */
@@ -205,10 +261,6 @@ body.dark header {
 
 body.dark footer {
   border-top: 1px solid #444;
-}
-
-.header-right i:hover {
-  color: #90caf9; /* Adjust hover color for dark mode */
 }
 
 /* Work Experience Section */

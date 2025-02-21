@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'dark') {
     body.classList.add('dark');
-    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    if (themeToggle) themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
   }
 
   // Theme toggle functionality
@@ -25,16 +25,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuButton = document.getElementById('hamburger-menu');
   const mobileNav = document.getElementById('mobile-nav');
 
-  menuButton?.addEventListener('click', () => {
-    mobileNav.classList.toggle('visible');
-    menuButton.classList.toggle('open');
-  });
+  if (menuButton && mobileNav) {
+    menuButton.addEventListener('click', (e) => {
+      e.stopPropagation(); // Prevents unwanted closing when clicking the button
 
-  // Close menu when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!menuButton.contains(e.target) && !mobileNav.contains(e.target)) {
-      mobileNav.classList.remove('visible');
-      menuButton.classList.remove('open');
-    }
-  });
+      mobileNav.classList.toggle('visible');
+      menuButton.classList.toggle('open');
+
+      // Change icon
+      menuButton.innerHTML = menuButton.classList.contains('open') 
+        ? '<i class="fas fa-times"></i>' // 'X' when open
+        : '<i class="fas fa-bars"></i>'; // Hamburger when closed
+    });
+
+    // Prevent clicks inside the menu from affecting anything else
+    mobileNav.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  }
 });

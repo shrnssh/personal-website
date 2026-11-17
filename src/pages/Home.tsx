@@ -47,7 +47,6 @@ function LocalTime() {
 
 export default function Home() {
   const current = experience[0]
-  const allSkills = Object.values(skills).flat()
 
   return (
     <Page>
@@ -94,7 +93,7 @@ export default function Home() {
             <div className="card-icon"><Briefcase size={18} /></div>
             <span className="eyebrow">Currently</span>
             <h3>{current.role} @ {current.org}</h3>
-            <p className="muted">Building visibility for multi-cloud networking: application insights, cost analysis, and multi-cluster monitoring.</p>
+            <p className="muted">{current.summary}</p>
             <ArrowUpRight className="card-arrow" size={18} />
           </Link>
         </Reveal>
@@ -114,12 +113,27 @@ export default function Home() {
         </Reveal>
         <Reveal className="card bento-item bento-wide marquee-card" delay={0.18}>
           <span className="eyebrow">Toolbox</span>
-          <div className="marquee" aria-label="Skills">
-            <div className="marquee-track">
-              {[...allSkills, ...allSkills].map((s, i) => (
-                <span key={i} className="tag" aria-hidden={i >= allSkills.length}>{s}</span>
-              ))}
-            </div>
+          <div className="toolbox">
+            {Object.entries(skills).map(([group, items], row) => {
+              // Repeat short lists so each track is wide enough to loop seamlessly.
+              const base = Array.from({ length: Math.ceil(8 / items.length) }, () => items).flat()
+              return (
+                <div key={group} className="toolbox-row">
+                  <span className="toolbox-label mono">{group}</span>
+                  <div className="marquee" aria-label={`${group}: ${items.join(', ')}`}>
+                    <div
+                      className={`marquee-track ${row % 2 ? 'reverse' : ''}`}
+                      style={{ animationDuration: `${28 + row * 6}s` }}
+                      aria-hidden="true"
+                    >
+                      {[...base, ...base].map((s, i) => (
+                        <span key={i} className="tag">{s}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
           </div>
         </Reveal>
       </section>

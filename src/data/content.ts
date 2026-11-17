@@ -23,16 +23,34 @@ export type Experience = {
   org: string
   orgUrl?: string
   period: string
-  location: string
+  location?: string
+  /** Earlier titles at the same company, most recent first. */
+  previousRoles?: { role: string; period: string }[]
+  /** Short one-line summary, used on the home page. */
+  summary?: string
   points: (string | { text: string; link: Link })[]
 }
 
 export const experience: Experience[] = [
   {
+    role: 'Senior Software Engineer',
+    org: 'Crusoe',
+    orgUrl: 'https://crusoe.ai/',
+    period: 'Aug 2026 — Present',
+    previousRoles: [{ role: 'Software Engineer', period: 'Mar 2025 — Aug 2026' }],
+    summary: "Building and scaling Crusoe's Managed Kubernetes platform, powering GPU-accelerated AI/ML infrastructure.",
+    points: [
+      {
+        text: "Building and scaling Crusoe's {link} platform, powering GPU-accelerated AI/ML infrastructure.",
+        link: { label: 'Managed Kubernetes', href: 'https://docs.crusoe.ai/orchestration/cmk/overview/' },
+      },
+    ],
+  },
+  {
     role: 'Software Engineer',
     org: 'Juniper Networks',
     orgUrl: 'https://www.juniper.net/us/en.html',
-    period: 'Jul 2021 — Present',
+    period: 'Jul 2021 — Mar 2025',
     location: 'Sunnyvale, CA',
     points: [
       {

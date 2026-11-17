@@ -36,9 +36,15 @@ export default function Timeline({ items }: { items: Experience[] }) {
               </div>
               <div className="meta">
                 <span className="mono">{x.period}</span>
-                <span className="muted"><MapPin size={12} /> {x.location}</span>
+                {x.location && <span className="muted"><MapPin size={12} /> {x.location}</span>}
               </div>
             </div>
+            {x.previousRoles?.map((r) => (
+              <div key={r.role + r.period} className="prev-role">
+                <span>{r.role}</span>
+                <span className="mono muted">{r.period}</span>
+              </div>
+            ))}
             <ul className="points">
               {x.points.map((p, j) => (
                 <li key={j}><Point p={p} /></li>

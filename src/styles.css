@@ -306,7 +306,7 @@ main.container { flex: 1; padding-top: 112px; padding-bottom: 80px; }
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; gap: 40px; padding-top: 8px; }
-  .portrait { order: -1; justify-self: start; width: 140px; }
+  .portrait { order: -1; justify-self: center; width: 160px; }
   .portrait img { border-radius: 22px; }
   .bento { grid-template-columns: minmax(0, 1fr); }
   .bento-wide { grid-column: auto; }
